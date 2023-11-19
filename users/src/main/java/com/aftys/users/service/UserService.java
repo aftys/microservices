@@ -27,7 +27,7 @@ public class UserService {
 
     public User addUser(User user) {
         User newUser = userRepository.save(user);
-        Notification newNotification = new Notification("New user added: " + newUser.getUsername());
+        Notification newNotification = new Notification("New user added: " + newUser.getEmail());
         restTemplate.postForObject("http://notifications/notifications", newNotification, Notification.class);
         return newUser;
     }

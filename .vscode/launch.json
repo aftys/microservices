@@ -19,7 +19,8 @@
             "mainClass": "com.aftys.users.UsersApplication",
             "projectName": "users",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=33741 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=users"
         },
         {
             "type": "java",
@@ -40,7 +41,8 @@
             "mainClass": "com.aftys.notifications.NotificationsApplication",
             "projectName": "notifications",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=45345 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=notifications"
         },
         {
             "type": "java",
@@ -49,6 +51,17 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.aftys.gateway.GatewayApplication",
             "projectName": "gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=43287 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=gateway"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-IdentityServiceApplication<identity-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.aftys.identityservice.IdentityServiceApplication",
+            "projectName": "identity-service",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

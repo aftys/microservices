@@ -1,5 +1,4 @@
-package com.aftys.users.model;
-
+package com.aftys.identityservice.model;
 
 import java.util.Date;
 

@@ -33,7 +33,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http)throws Exception {
          http.csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authz -> authz
-            .requestMatchers("/auth/register","/auth/validate","/auth/token").permitAll()
+            .requestMatchers("/auth/register","/auth/validate","/auth/token","/auth/verify-token").permitAll()
             .anyRequest().authenticated());
                 
           return http.build();

@@ -5,19 +5,15 @@ jwt:
 
 spring:
   application:
-    name: identity-service
+    name: identity
   datasource:
-    url: jdbc:mysql://localhost:3306/users
+    url: jdbc:mysql://localhost:3306/user
     username: root
-    password: 1234
+    password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.MySQLDialect
-          format_sql: true
     show-sql: true
 server:
   port: 8083

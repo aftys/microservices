@@ -14,7 +14,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-
 public class User {
 
     @Id
@@ -26,6 +25,5 @@ public class User {
     private Date birthDate;
     private String password;
     private String role;
-
 }
 

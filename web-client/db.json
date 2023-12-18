@@ -1,0 +1,41 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstname": "John",
+            "lastname": "Doe",
+            "email": "john.doe@example.com",
+            "phone": 123456789,
+            "image": "/path/to/image.jpg",
+            "role": "ADMIN",
+            "tokenVersion": 1,
+            "createdAt": "2023-01-01T12:00:00Z",
+            "notificationToken": "abc123def456",
+            "signupCompleted": true,
+            "isEmailValide": true,
+            "country": "United States",
+            "city": "New York",
+            "birthdate": "1990-01-01T00:00:00Z",
+            "gender": "Male",
+            "weight": "70kg",
+            "height": "180cm"
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode2"
+    }
+}

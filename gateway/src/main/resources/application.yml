@@ -17,13 +17,13 @@ spring:
           predicates:
             - Path=/users/**
           filters:
-            - name: AuthenticationFilter
+            - AuthenticationFilter 
         - id: notifications
           uri: lb://NOTIFICATIONS
           predicates:
             - Path=/notifications/**
-        - id: identity-service
-          uri: lb://IDENTITY-SERVICE
+        - id: identity-
+          uri: lb://IDENTITY
           predicates:
             - Path=/auth/**
 

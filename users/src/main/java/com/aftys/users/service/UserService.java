@@ -21,8 +21,8 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User getUser(String username) {
-        return userRepository.findById(username).orElse(null);
+    public User getUser(Long id) {
+        return userRepository.findById(id).orElse(null);
     }
 
     public User addUser(User user) {
@@ -32,7 +32,7 @@ public class UserService {
         return newUser;
     }
 
-    public void deleteUser(String username) {
-        userRepository.deleteById(username);
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
     }
 }

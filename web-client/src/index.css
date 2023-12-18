@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.switcher[data-ison="true"] {
+    justify-content: flex-end;
+}
+
+.app-dark-bg {
+    background:rgb(27, 38, 61);
+    
+} 
+
+.app-light-bg{
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
+.page-loader {
+    width: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.page-loader-ball {
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #22d3ee;
+}
+
+.page-loader-ball::is(.dark .dark\:bg-blue-900) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
+
+.page-loader-ball:nth-child(1) {
+    animation: bounce-1 2.1s ease-in-out infinite;
+}
+
+@keyframes bounce-1 {
+    50% {
+        transform: translateY(-18px);
+        width: 6px;
+        height: 6px;
+    }
+}
+
+.page-loader-ball:nth-child(2) {
+    animation: bounce-3 2.1s ease-in-out 0.3s infinite;
+}
+
+@keyframes bounce-2 {
+    50% {
+        transform: translateY(-18px);
+        width: 6px;
+        height: 6px;
+    }
+}
+
+.page-loader-ball:nth-child(3) {
+    animation: bounce-3 2.1s ease-in-out 0.6s infinite;
+}
+
+@keyframes bounce-3 {
+    50% {
+        transform: translateY(-18px);
+        width: 6px;
+        height: 6px;
+    }
+}
+
+
+.card   {
+  --background: #fff;
+  --background-checkbox: #22d3ee ;
+  --background-image: #fff, rgba(0, 107, 175, 0.2);
+  --text-color: #666;
+  --text-headline: #000;
+  --card-shadow: #22d3ee;
+  --card-height: 190px;
+  --card-width: 190px;
+  --card-radius: 12px;
+  --header-height: 47px;
+  --blend-mode: overlay;
+  --transition: 0.15s;
+  border-radius:10%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+
+
+.card__input {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 10%;
+}
+
+.card__input:checked ~ .card__body {
+  --shadow: 0 0 0 3px var(--card-shadow);
+}
+.card__input:checked ~ .card__body .card__body-cover-checkbox {
+  --check-border: #fff;
+  --check-scale: 1;
+  --check-opacity: 1;   
+}
+.card__input:checked ~ .card__body .card__body-cover-checkbox--svg {
+  --stroke-color: #fff;
+  --stroke-dashoffset: 0;
+}
+
+
+
+.card__body {
+  display: grid;
+  grid-auto-rows: calc(var(--card-height) - var(--header-height)) auto;
+  height: var(--card-height);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow, 0 4px 4px 0 rgba(0, 0, 0, 0.02));
+  transition: transform var(--transition), box-shadow var(--transition);
+  transform: scale(var(--scale, 1)) translateZ(0);
+}
+
+
+
+.card__body-cover-checkbox {
+  background: var(--check-bg, var(--background-checkbox));
+  border: 2px solid var(--check-border, #fff);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  opacity: var(--check-opacity, 0);
+  transition: transform var(--transition), opacity calc(var(--transition) * 1.2) linear;
+  transform: scale(var(--check-scale, 0));
+}
+.card__body-cover-checkbox--svg {
+  width: 13px;
+  height: 11px;
+  display: inline-block;
+  vertical-align: top;
+  fill: none;
+  margin: 7px 0 0 5px;
+  stroke: var(--stroke-color, #fff);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: var(--stroke-dashoffset, 16px);
+  transition: stroke-dashoffset 0.4s ease var(--transition);
+}
+
+

@@ -19,9 +19,9 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @GetMapping("/{username}")
-    public User getUser(@PathVariable String username) {
-        return userService.getUser(username);
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable Long id) {
+        return userService.getUser(id);
     }
 
     @PostMapping
@@ -29,8 +29,8 @@ public class UserController {
         return userService.addUser(user);
     }
 
-    @DeleteMapping("/{username}")
-    public void deleteUser(@PathVariable String username) {
-        userService.deleteUser(username);
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
     }
 }
